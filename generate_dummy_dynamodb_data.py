@@ -27,14 +27,14 @@ def generate_data(count=1000):
     return data
 
 
-def save_as_json(data, filename="dynamodb_sample_data.json"):
+def save_as_json(data, filename="data/dynamodb_sample_data.json"):
     """Save data to a local JSON file"""
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
     print(f"✅ {len(data)} records saved to {filename}")
 
 
-def save_as_csv(data, filename="dynamodb_sample_data.csv"):
+def save_as_csv(data, filename="data/dynamodb_sample_data.csv"):
     """Save data to a local CSV file"""
     keys = data[0].keys()
     with open(filename, "w", newline="", encoding="utf-8") as f:
